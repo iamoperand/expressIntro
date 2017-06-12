@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>To-Do List</title>
+	</head>
+	<body>
+	<div style="text-align:center">
+		<h2>Create your To-Do</h2>
+		<form action="/" method="POST">
+			<textarea rows="3" cols="100" id="todo" name="todo"></textarea>
+			<br />
+			<br />
+			<button type="submit" id="btn">Publish</button>
+			<br />
+		</form>
+	</div>
+
+	<div>
+		<a type="button" href="/todo">Check To-Dos</a>
+	</div>
+	<!--
+	<div>&nbsp;</div>	
+	<div style="text-align:center">
+		<h3>To-Do List</h3>	
+		<ol id="toDoList"></ol>
+	</div>	
+		<script>
+			var toDo = document.getElementById('todo');
+			
+ 			var btn = document.getElementById('btn');
+ 			var toDoList = document.getElementById('toDoList');
+			var finalString = '';
+			btn.onclick = function(){
+				
+				if(toDo.value !== ''){var toDoHTML = '<li>' + toDo.value + '</li>';
+				toDo.value = "";
+				finalString = toDoHTML + finalString;
+				toDoList.innerHTML = finalString;}
+			}
+
+		
+			
+
+		</script>
+	-->
+	</body>
+</html>
