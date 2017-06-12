@@ -1,5 +1,5 @@
 var express = require('express');
-//var bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
 var path = require('path');
 var fs = require('fs');
 
@@ -7,10 +7,10 @@ var app = express();
 
 
 // parse application/x-www-form-urlencoded 
-//app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
  
 // parse application/json 
-//app.use(bodyParser.json());
+app.use(bodyParser.json());
 
 
 app.get('/', function(req, res){
@@ -38,14 +38,14 @@ app.get('/todo', function(req, res){
 
 	  	res.end();
 	})
-});
+})
 
 app.post('/', function(req, res){
 
-	console.log(req.body);
+	console.log(req.body.todo);
 
 
-	fs.appendFile('../todo.json', req.body + ',', function(err) {
+	fs.appendFile('../todo.json', req.body.todo + ',', function(err) {
     if (err) {
     	console.log('Error in writing the content to the file');
 
